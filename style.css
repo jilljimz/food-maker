@@ -1,0 +1,259 @@
+
+html, body{
+  margin:0;
+  padding:0;
+  height:100vh;
+  overflow:hidden;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+#toppings{
+  margin-top: 0px;
+}
+
+#parfait-area {
+  position: relative;
+  width: min(60vw, 510px);
+  height: min(60vw, 510px);
+}
+
+#parfait-base {
+  width: 100%;
+  height: 100%;
+}
+.border_toppings{
+    border: 2px solid #0f0f0f;
+    border-radius: 8px; 
+     background: #f7dec1;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.border_toppings_2{
+    /*border: 2px solid #0f0f0f;*/
+    border-radius: 8px; 
+     /*background: #f7dec1;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    width: 100px;
+  height: 100px;
+}
+.border_toppings:hover{
+  background-color: #68f492;
+}
+.label{
+  font-style: bold;
+  font-size: xx-large;
+}
+.topping {
+  width: 80px;   /* smaller */
+  height: 80px;  /* smaller */
+  cursor: grab;
+  margin: 5px;
+  object-fit: contain;
+}
+
+.ingredients-title{
+  width: 100%;
+  text-align: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px 5px rgb(250, 166, 166);
+  padding-left: 500px;
+
+}
+.question_label{
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px 5px rgb(250, 166, 166);
+ 
+}
+
+
+.draggable {
+  position: absolute;
+  cursor: grab;
+  
+}
+
+#resetBtn {
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ef476f;
+  color: rgb(10, 10, 10);
+}
+
+
+#resetBtn:hover {
+  opacity: 0.85;
+}
+#fullscreenBtn{
+   margin-top: 15px;
+  margin-right: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #a3ce3e;
+  color: rgb(10, 10, 10);
+}
+
+#fullscreenBtn:hover{
+  background: #70ebce;
+}
+#undoBtn {
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffd166;
+}
+#finishBtn{
+   margin-top: 15px;
+  margin-right: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #68f492;
+  color: rgb(14, 14, 14);
+}
+#finishBtn:hover{
+  background-color: forestgreen;
+}
+#undoBtn:hover {
+  opacity: 0.85;
+}
+
+#rotateSlider {
+  width: 200px;
+  cursor: pointer;
+}
+#sizeSlider {
+  width: 200px;
+  cursor: pointer;
+}
+#deleteBtn {
+  margin-top: 15px;
+  margin-right: 15px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #118ab2;
+  color: rgb(0, 0, 0);
+}
+
+#deleteBtn:hover {
+  opacity: 0.85;
+}
+
+
+
+/* ===== Fullscreen Mode ===== */
+/* ===== Normal Controls ===== */
+.controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* ===== Fullscreen Mode ===== */
+.fullscreen-mode #container{
+
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  transform: scale(1.1);
+  transform-origin: center;
+  margin-top: 0px;
+}
+.fullscreen-mode .question_label{
+  font-size: 40px;
+}
+.fullscreen-mode .ingredients-title{
+  padding-left: 605px; /* optional, can also center with text-align */
+ 
+}
+
+/* Bigger toppings */
+.fullscreen-mode .topping{
+  width: 100px;  /* adjust if too big */
+  height: 100px;
+
+}
+
+/* Bigger pizza area */
+.fullscreen-mode #parfait-area{
+  width: 600px;   /* adjust if too big */
+  height: 600px;
+}
+
+/* Bigger labels */
+.fullscreen-mode .label{
+  font-size: 36px;
+}
+
+/* Scale and center buttons/controls */
+.fullscreen-mode .controls{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transform: scale(1.1);  /* bigger buttons */
+ 
+}
+
+.fullscreen-mode .controls button{
+  font-size: 20px;
+  padding: 12px 20px;
+}
+.fullscreen-mode .controls input[type="range"]{
+  width: 250px;
+  height: 10px;
+}
+.fullscreen-mode .question_label {
+ 
+  left: 20px;           /* distance from left */
+  text-align: left;     /* left-align the text */
+  width: auto;          /* shrink to fit text */
+  font-size: 45px;      /* keep your desired size */
+  color: rgb(0,0,0);
+  text-shadow: 3px 3px 5px rgb(250,166,166);
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pizza Maker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+function enterFullscreen() {
+  if (!document.fullscreenElement) {
+    document.documentElement.requestFullscreen();
+  }
+}
+
+document.addEventListener("click", enterFullscreen, { once: true });
+</script>
+<body>
+
+  <h1  class="question_label">🍕 What do you want?</h1>
+
+  <div id="container">
+
+    <div class="ingredients-title">VEGETABLES</div>
+
+    <div id="parfait-area">
+      <img src="pizza.png" id="parfait-base"  />
+    </div>
+
+    <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Onions</div>
+         <img src="onion.png" class="topping" />
+         <img src="whole_onions.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Cucumbers</div>
+         <img src="cucumber_slice.png" class="topping" />
+         <img src="cucumbers_whole.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+         <div class="label">Potatoes</div>
+          <img src="potatoes.png" class="topping" />
+          <img src="whole_potatoes.png" class="topping" />
+        </div>
+      
+    </div>
+     <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Corn</div>
+         <img src="corn.png" class="topping" />
+         <img src="whole_corns.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Green peppers</div>
+         <img src="green_pepper.png" class="topping" />
+         <img src="whole_green_peppers.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Tomatoes</div>
+          <img src="tomato.png" class="topping" />
+          <img src="whole_tomatoes.png" class="topping" />
+        </div>
+        
+      
+    </div>
+    <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Mushrooms</div>
+         <img src="mushroom.png" class="topping" />
+         <img src="whole_mushrooms.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+         <div class="label">Cabbage</div>
+         <img src="cabbage_scatter.png" class="topping" />
+         <img src="whole_cabbages.png" class="topping" />
+        </div>
+        
+        <div class="border_toppings">
+          <div class="label">Carrots</div>
+           <img src="carrots.png" class="topping" />
+         <img src="whole_carrots.png" class="topping" />
+        </div>
+      
+    </div>
+
+     
+    
+  </div>
+
+  <div class="controls">
+   <button id="undoBtn">↩️ Undo</button>
+<button id="deleteBtn">❌ Delete</button>
+<button id="resetBtn">🗑️ Reset Pizza</button>
+<button id="fullscreenBtn" onclick="toggleFullscreen()">🖥 Fullscreen</button>
+<div style="margin-top: 15px;">
+  🍥 Rotate:
+  <input
+    type="range"
+    id="rotateSlider"
+    min="0"
+    max="360"
+    value="0"
+  />
+</div>
+<div style="margin-top: 10px;">
+  📏 Size:
+  <input
+    type="range"
+    id="sizeSlider"
+    min="0.5"
+    max="2"
+    step="0.05"
+    value="1"
+  />
+</div>
+<button id="finishBtn">✅ Done</button>
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>
