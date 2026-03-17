@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Parfait Maker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1>🍨 Parfait Maker</h1>
+
+  <div id="container">
+    <div id="capture-frame">
+      <div id="parfait-area">
+      <img src="parfait.png" id="parfait-base"  />
+    </div>
+    </div>
+    
+
+    <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Strawberries</div>
+            <img src="strawberry.png" class="topping" />
+            <img src="whole_strawberries.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Bananas</div>
+         <img src="banana.png" class="topping" />
+          <img src="whole_bananas.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Blueberries</div>
+          <img src="blueberry.png" class="topping" />
+           <img src="whole_blueberries.png" class="topping" />
+        </div>
+      
+    </div>
+     <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Cherries</div>
+         <img src="cherry.png" class="topping" />
+          <img src="whole_cherries.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Pineapple</div>
+         <img src="pineapple.png" class="topping" />
+          <img src="whole_pineapple.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Kiwi Fruits</div>
+          <img src="kiwi.png" class="topping" />
+           <img src="whole_kiwis.png" class="topping" />
+        </div>
+      
+    </div>
+    <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Apples</div>
+         <img src="apple.png" class="topping" />
+          <img src="whole_apples.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Oranges</div>
+         <img src="orange.png" class="topping" />
+          <img src="whole_orange.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Peaches</div>
+          <img src="peach.png" class="topping" />
+           <img src="whole_peaches.png" class="topping" />
+        </div>
+      
+    </div>
+     <div id="toppings">
+        <div class="border_toppings">
+          <div class="label">Vanilla Ice Cream</div>
+         <img src="vanilla_ice_cream.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Chocolate Ice Cream</div>
+         <img src="chocolate_ice_cream.png" class="topping" />
+        </div>
+        <div class="border_toppings">
+          <div class="label">Strawberry Ice Cream</div>
+          <img src="strawberry_ice_cream.png" class="topping" />
+        </div>
+      
+    </div>
+  </div>
+<div id="controls">
+<button id="undoBtn">↩️ Undo</button>
+<button id="deleteBtn">❌ Delete</button>
+<button id="resetBtn">🗑️ Reset Parfait</button>
+<button id="fullscreenBtn" onclick="toggleFullscreen()">🖥 Fullscreen</button>
+<button id="bringForwardBtn">⬆️ Bring Forward</button>
+<button id="sendBackwardBtn">⬇️ Send Backward</button>
+
+<div style="margin-top: 15px;">
+  🍥 Rotate:
+  <input
+    type="range"
+    id="rotateSlider"
+    min="0"
+    max="360"
+    value="0"
+  />
+</div>
+<div style="margin-top: 10px;">
+  📏 Size:
+  <input
+    type="range"
+    id="sizeSlider"
+    min="0.5"
+    max="2"
+    step="0.05"
+    value="1"
+  />
+<!--</div><button id="finishBtn">✅ Done</button>-->
+</div>
+<button id="finishBtn">✅ Done</button>
+
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="renderer.js"></script>
+</body>
+</html>

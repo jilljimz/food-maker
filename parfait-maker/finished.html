@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>My Finished Parfait</title>
+  <style>
+    body {
+     margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: sans-serif;
+  background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+      
+    }
+
+  
+#result_holder {
+  width: 400px;
+  aspect-ratio: 2 / 3; /* adjust to your capture */
+}
+
+
+   #resultImage {
+  max-width: 75vw;                  /* almost full width */
+  max-height: 77vh;                 /* almost full height */
+  object-fit: contain;
+}
+ h1 {
+      margin: 20px 0 0 0;   /* space from top */
+      font-size: 50px;
+      text-align: center;
+      color: rgb(11, 11, 11);         /* optional for better visibility */
+      text-shadow: 2px 2px 4px rgb(226, 165, 165); /* optional for contrast */
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #06d6a0;
+      color: rgb(0, 0, 0);
+      
+    }
+    button:hover{
+      background-color: coral;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🍨My Parfait</h1>
+     <div id="result_holder">
+        <img id="resultImage" />
+     </div>
+      <button onclick="goPizza()">🍕MAKE A PIZZA</button>
+     
+
+
+  <br />
+ 
+
+ <script>
+    const img = document.getElementById("resultImage");
+    img.src = sessionStorage.getItem("parfaitImage");
+    
+
+  </script>
+  <script>
+function goPizza() {
+  window.location.href = "/pizza_maker/index.html";
+}
+</script>
+   
+</body>
+</html>
+
+
+

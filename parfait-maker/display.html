@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Paste Screenshot</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(background.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #preview {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    #hint {
+      position: absolute;
+      color: #aaa;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="hint"><h1>Finished</h1>📋 Paste a screenshot (Ctrl + V)</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

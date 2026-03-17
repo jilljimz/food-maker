@@ -1,0 +1,219 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-image: url(background.jpg);
+   background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overscroll-behavior: none;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+#parfait-area {
+  position: relative;
+  width: 400px;
+  height: 600px;          /* extra space for toppings */
+  /*border: 2px dashed #ccc;*/
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;  /* base sits at bottom */
+ overflow: visible; /* important */
+
+}
+#capture-frame {
+  overflow: visible;
+  width: 400px;
+  height: 600px;
+}
+
+
+.label{
+  font-style: bold;
+  font-size: 36px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#parfait-base {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.border_toppings{
+    border: 2px solid #0f0f0f;
+    border-radius: 8px; 
+    background: #f7dec1;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.border_toppings:hover{
+  background-color: #68f492;
+}
+
+.topping {
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  margin: 5px;
+  object-fit: contain;
+  
+}
+
+.draggable {
+  position: absolute;
+  cursor: grab;
+}
+#resetBtn {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ef476f;
+  color: white;
+}
+#fullscreenBtn{
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ef476f;
+  color: rgb(4, 4, 4);
+}
+#fullscreenBtn:hover{
+  background: #88f4cc;
+}
+#bringForwardBtn{
+margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #bcf159;
+  color: rgb(9, 9, 9);
+}
+#bringForwardBtn:hover{
+  background: #88f4cc;
+}
+#sendBackwardBtn{
+margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ef476f;
+  color: rgb(0, 0, 0);
+}
+#sendBackwardBtn:hover{
+  background: #88f4cc;
+}
+
+#resetBtn:hover {
+  opacity: 0.85;
+}
+#undoBtn {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #ffd166;
+}
+/* normal mode: controls flow naturally */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+body.fullscreen-mode #controls {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  z-index: 9999; /* always on top */
+}
+
+#undoBtn:hover {
+  opacity: 0.85;
+}
+
+#rotateSlider {
+  width: 200px;
+  cursor: pointer;
+}
+#sizeSlider {
+  width: 200px;
+  cursor: pointer;
+}
+#deleteBtn {
+  margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #118ab2;
+  color: white;
+}
+#finishBtn{
+   margin-top: 5px;
+  margin-right: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #68f492;
+  color: rgb(14, 14, 14);
+}
+#finishBtn:hover{
+  background-color: forestgreen;
+}
+#deleteBtn:hover {
+  opacity: 0.85;
+}
+/* Drop animation */
+@keyframes dropIn {
+  0% {
+    transform: translateY(-40px) scale(0.8);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+}
+
+/* Apply to toppings */
+.draggable {
+  position: absolute;
+  cursor: grab;
+  animation: dropIn 0.4s ease;
+}
