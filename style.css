@@ -22,6 +22,7 @@ body {
   align-items: center;
   gap: 2vw;
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 #toppings{
   margin-top: 0px;
@@ -187,12 +188,10 @@ body {
   height: 100vh;
 }
 .controls{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-top: 5px;
+  position: sticky;
+  bottom: 0;
+  background: rgba(255,255,255,0.9);
+  padding: 10px;
 }
 
 /* ===== Fullscreen Mode ===== */
