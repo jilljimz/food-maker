@@ -199,7 +199,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  transform: scale(1.1);
+  transform: scale(1.4);
   transform-origin: center;
   margin-top: 0px;
 }
@@ -213,15 +213,17 @@ body {
 
 /* Bigger toppings */
 .fullscreen-mode .topping{
-  width: 100px;  /* adjust if too big */
-  height: 100px;
+ width: 120px;
+  height: 120px;
 
 }
 
 /* Bigger pizza area */
 .fullscreen-mode #parfait-area{
-  width: 600px;   /* adjust if too big */
-  height: 600px;
+ width: 80vw;
+  height: 80vw;
+  max-width: 700px;
+  max-height: 700px;
 }
 
 /* Bigger labels */
