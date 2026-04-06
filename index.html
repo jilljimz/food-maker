@@ -121,14 +121,6 @@ document.addEventListener("click", enterFullscreen, { once: true });
 
   <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
   <script src="renderer.js"></script>
-  <script>
-document.addEventListener("click", function(event) {
-  // Check if the clicked element is NOT a button
-  if (!event.target.closest("button")) {
-    event.preventDefault();
-    event.stopPropagation();
-  }
-});
-</script>
+  
 </body>
 </html>
