@@ -1,9 +1,9 @@
 
 html, body{
-  margin:0;
-  padding:0;
-  height:100vh;
-  overflow:hidden;
+   margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden; /* ✅ no scroll */
 }
 
 body {
@@ -14,24 +14,28 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
 #container {
+  flex: 1; /* ✅ takes remaining space */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2vw;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  overflow: hidden;
 }
 #toppings{
   margin-top: 0px;
 }
 
 #parfait-area {
-   position: relative;
-  width: min(80vw, 80vh);
-  height: min(80vw, 80vh);
+  position: relative;
+  width: min(60vh, 60vw);
+  height: min(60vh, 60vw);
 }
 
 #parfait-base {
@@ -63,8 +67,9 @@ body {
   font-size: xx-large;
 }
 .topping {
-   width: clamp(40px, 6vw, 100px);
-  height: clamp(40px, 6vw, 100px);
+
+  width: clamp(30px, 5vh, 80px);
+  height: clamp(30px, 5vh, 80px);
   cursor: grab;
   margin: 5px;
   object-fit: contain;
@@ -87,6 +92,8 @@ body {
   color: rgb(0, 0, 0);
   text-shadow: 3px 3px 5px rgb(250, 166, 166);
   font-size: clamp(20px, 3vw, 40px);
+  flex: 0 0 auto;
+ 
 }
 
 
@@ -188,12 +195,22 @@ body {
   height: 100vh;
 }
 .controls{
-  position: sticky;
-  bottom: 0;
-  background: rgba(255,255,255,0.9);
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
   padding: 10px;
+
+  /* auto resize */
+  transform: scale(clamp(0.8, 1.5vh, 1.2));
+  transform-origin: center;
 }
 
+.controls button{
+  font-size: clamp(12px, 1.8vh, 18px);
+  padding: clamp(6px, 1vh, 12px) clamp(10px, 2vh, 20px);
+}
 /* ===== Fullscreen Mode ===== */
 .fullscreen-mode body{
   display: flex;
