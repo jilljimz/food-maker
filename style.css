@@ -19,9 +19,8 @@ body {
 #container {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 20px;
-  gap: 20px;
+  align-items: center;
+  gap: 2vw;
   flex-wrap: wrap;
 }
 #toppings{
@@ -29,9 +28,9 @@ body {
 }
 
 #parfait-area {
-  position: relative;
-  width: min(60vw, 510px);
-  height: min(60vw, 510px);
+   position: relative;
+  width: min(80vw, 80vh);
+  height: min(80vw, 80vh);
 }
 
 #parfait-base {
@@ -63,8 +62,8 @@ body {
   font-size: xx-large;
 }
 .topping {
-  width: 80px;   /* smaller */
-  height: 80px;  /* smaller */
+   width: clamp(40px, 6vw, 100px);
+  height: clamp(40px, 6vw, 100px);
   cursor: grab;
   margin: 5px;
   object-fit: contain;
@@ -73,7 +72,7 @@ body {
 .ingredients-title{
   width: 100%;
   text-align: center;
-  font-size: 48px;
+ font-size: clamp(30px, 4vw, 60px);
   font-weight: bold;
   color: rgb(0, 0, 0);
   text-shadow: 3px 3px 5px rgb(250, 166, 166);
@@ -83,11 +82,10 @@ body {
 .question_label{
   width: 100%;
   text-align: center;
-  font-size: 30px;
   font-weight: bold;
   color: rgb(0, 0, 0);
   text-shadow: 3px 3px 5px rgb(250, 166, 166);
- 
+  font-size: clamp(20px, 3vw, 40px);
 }
 
 
@@ -184,6 +182,10 @@ body {
 
 /* ===== Fullscreen Mode ===== */
 /* ===== Normal Controls ===== */
+.fullscreen-mode {
+  width: 100vw;
+  height: 100vh;
+}
 .controls{
   display: flex;
   flex-wrap: wrap;
@@ -194,14 +196,11 @@ body {
 }
 
 /* ===== Fullscreen Mode ===== */
-.fullscreen-mode #container{
-
+.fullscreen-mode body{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  transform: scale(1.4);
-  transform-origin: center;
-  margin-top: 0px;
 }
 .fullscreen-mode .question_label{
   font-size: 40px;
