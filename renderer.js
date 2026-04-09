@@ -277,13 +277,13 @@ deleteBtn.addEventListener("click", () => {
   });
 });**/
 // --- Fullscreen button ---
-fullscreenBtn.addEventListener("click", () => {
+/*fullscreenBtn.addEventListener("click", () => {
   if (document.documentElement.requestFullscreen) {
     document.documentElement.requestFullscreen().then(() => {
       document.body.classList.add("fullscreen-mode"); // scale pizza & controls
     });
   }
-});
+});*/
 
 // --- Done button ---
 // --- Done button ---
